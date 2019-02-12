@@ -1,0 +1,19 @@
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__cart {
+		margin: 0 12px;
+	}
+
+	&__search {
+		position: relative;
+		margin-left: 12px;
+	}
+
+	&__img {
+		display: block;
+		cursor: pointer;
+	}
+}
