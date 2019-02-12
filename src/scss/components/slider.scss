@@ -1,0 +1,166 @@
+@import "../variables";
+@import "../mixins";
+
+.slider {
+	background: linear-gradient(90deg, #cdced2, #c5c6ca);
+
+	.slider__item {
+		display: flex;
+		align-items: center;
+		padding: 0 60px;
+		box-sizing: border-box;
+	}
+
+	.slider__img {
+		flex-basis: 50%;
+		align-self: flex-end;
+
+		img {
+			display: block;
+			max-width: 100%;
+		}
+	}
+
+	.slider__info {
+		flex-basis: 50%;
+		padding-left: 70px;
+		box-sizing: border-box;
+
+		p {
+			font-size: 14px;
+			line-height: 26px;
+			color: $slider-text;
+			margin: 25px 0;
+		}
+
+		.slider__title {
+			font-size: 116px;
+			line-height: 107px;
+			font-weight: 600;
+			color: $black;
+			letter-spacing: 2.32px;
+			text-transform: uppercase;
+		}
+
+		.slider__type {
+			font-size: 18px;
+			line-height: 25px;
+			font-weight: 600;
+			color: $black;
+
+			span {
+				font-size: 14px;
+				letter-spacing: 1.12px;
+				font-weight: 300;
+				margin-left: 25px;
+			}
+		}
+
+		.slider__icon {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 25px 0;
+
+			a {
+				width: 37px;
+				height: 37px;
+				border: 1px solid $black;
+				border-radius: 50%;
+				margin-right: 20px;
+				position: relative;
+
+				&:first-of-type {
+					background-color: $black;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				img {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		.slider__btn {
+			@include btn();
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.slider {
+		.slider__item {
+			.slider__info {
+				.slider__title {
+					font-size: 100px;
+					line-height: 80px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.slider {
+		.slider__item {
+			.slider__info {
+				.slider__title {
+					font-size: 80px;
+					line-height: 80px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.slider {
+		.slider__img {
+			display: none;
+		}
+
+		.slider__info {
+			padding-left: 0;
+			flex-basis: 100%;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.slider {
+		.slider__item {
+			.slider__info {
+				.slider__title {
+					font-size: 50px;
+					line-height: 50px;
+					letter-spacing: 1px;
+				}
+
+				.slider-icon,
+				p {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.slider {
+		.slider__item {
+			padding: 0 15px;
+
+			.slider__info {
+				.slider__title {
+					font-size: 29px;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}
